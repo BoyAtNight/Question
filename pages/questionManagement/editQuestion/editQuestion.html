@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="pages/questionManagement/editQuestion/editQuestion.css">
+
+<div class="edit">
+    <form id="subTitle_edit" class="layui-form subTitle" lay-filter="subTitle">
+        <div class="layui-form-item">
+            <label class="layui-form-label">问卷标题</label>
+            <div class="layui-input-block">
+                <input type="text" name="question_title" class="layui-input" lay-verify="required" placeholder="请输入问卷标题">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">问卷类型</label>
+            <div class="layui-input-block">
+                <select name="question_type_id" lay-verify="required">
+                    <option value="">请选择问卷类型</option>
+                    <option value="0">生活类</option>
+                    <option value="1">体育类</option>
+                    <option value="2">美食类</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">是否发布</label>
+            <div class="layui-input-block">
+                <input type="radio" name="status" value="1" title="立即发布">
+                <input type="radio" name="status" value="0" title="稍后发布">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">问卷描述</label>
+            <div class="layui-input-block">
+                <textarea name="question_des" class="layui-textarea" lay-verify="required" placeholder="请输入描述内容"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="layui-btn" lay-submit lay-filter="saveTitle"></button>
+    </form>
+    <form id="content_edit" class="layui-form content">
+        <button type="submit" class="layui-btn" lay-submit lay-filter="saveForm">生成问卷</button>
+    </form>
+    <div class="buttonGroup">
+        <button class="layui-btn layui-btn-primary add_Subject" data-type="radio">单选题</button>
+        <button class="layui-btn layui-btn-primary add_Subject" data-type="checkbox">多选题</button>
+        <button class="layui-btn layui-btn-primary add_Subject" data-type="input">填空题</button>
+        <button id="submit_edit" class="layui-btn">生成问卷</button>
+        <button id="back_edit" class="layui-btn layui-btn-primary">返回</button>
+    </div>
+</div>
+
+<script src="pages/questionManagement/editQuestion/editQuestion.js"></script>

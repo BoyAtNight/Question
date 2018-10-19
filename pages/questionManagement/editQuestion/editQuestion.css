@@ -1,0 +1,107 @@
+.edit .subTitle {
+    border: 1px solid #ccc;
+    padding: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+.edit .subTitle .layui-form-label {
+    width: auto;
+}
+
+.edit .subTitle .layui-input-block {
+    margin-left: 90px;
+}
+
+.edit .subTitle textarea {
+    resize: none;
+}
+
+.edit .subTitle>button,
+.edit .content>button {
+    display: none;
+}
+
+.edit .content .layui-form-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    padding: 15px 15px 15px 0;
+}
+
+.edit .content .layui-form-item>.layui-form-label {
+    width: 35px;
+    padding-right: 0px;
+    text-align: left;
+}
+
+.edit .content .layui-form-item>div {
+    width: 85%;
+}
+
+.edit .content .layui-form-item>button{
+    display: none;
+    margin: 8px 0 0 20px;
+}
+
+.edit .content .layui-form-item:hover button{
+    display: block;
+}
+
+.edit .content .layui-form-item .options {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.edit .content .layui-form-item .options input[type='text'] {
+    width: 45%;
+    margin-right: 15px;
+}
+.edit .content .layui-form-item .options input[type='text']:first-child{
+    width: calc(45% + 28px);
+}
+
+.edit .content .layui-form-item .optionButton {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.edit .content .layui-form-item input {
+    border-color: transparent;
+    border-style: dashed;
+}
+
+.edit .content .layui-form-item input.inputBorder {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.edit .content .layui-form-item input:hover,
+.edit .content .layui-form-item input:focus {
+    border-color: #eee;
+}
+
+.edit .content .layui-form-item .layui-form-radio {
+    display: table;
+    margin: 0 0 0 10px;
+    padding-right: 0;
+}
+
+.edit .content .layui-form-item .layui-form-checkbox {
+    display: table;
+    margin-left: 12px;
+    padding-right: 0;
+}
+
+.layui-form-item .layui-form-checkbox[lay-skin=primary]{
+    margin-top: 2px;
+}
+
+.edit .buttonGroup {
+    text-align: center;
+}
+
+.edit .buttonGroup>button:nth-child(4) {
+    margin-left: 40px;
+}

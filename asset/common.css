@@ -1,0 +1,58 @@
+.layui-layout-admin .layui-body {
+    bottom: 0;
+    padding: 20px 0 20px 15px;
+}
+
+.layui-layout-admin .layui-body>div {
+    margin-right: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.search .layui-form-label {
+    width: auto;
+    padding-right: 0;
+}
+
+.search .layui-input-block {
+    width: 200px;
+}
+
+.search button {
+    min-width: 80px;
+}
+
+.table_container {
+    overflow-x: auto;
+}
+
+.table_container table{
+    margin-top: 5px;
+}
+
+.table_container table td,
+.table_container table th {
+    text-align: center;
+}
+
+
+.table_container table button{
+    min-width: 60px;
+}
+
+/* 修改密码弹框 */
+
+.changePwd {
+    display: none;
+}
+
+.changePwd form {
+    width: 380px;
+    margin: 20px 0 0 30px;
+}
+
+.changePwd form button{
+    width: 80px;
+}

@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="pages/questionStatistical/questionStatistical.css">
+
+<div class="statistical">
+    <form class="layui-form search">
+        <div class="layui-form-item">
+            <label class="layui-form-label">问卷标题：</label>
+            <div class="layui-input-block">
+                <input type="text" name="question_type" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-submit lay-filter="categorySearch">查询</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+    <div class="table_box">
+        <div class="table_container">
+            <table class="layui-table">
+                <thead>
+                    <tr>			
+                        <th style="min-width: 130px;">问卷标题</th>
+                        <th style="min-width: 130px;">答题状态</th>
+                        <th style="min-width: 160px;">开始时间</th>
+                        <th style="min-width: 130px;">答题时长</th>
+                        <th style="min-width: 130px;">完成率</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="statistical"></tbody>
+            </table>
+        </div>
+        <div id="pagination" style="text-align: right"></div>
+    </div>
+</div>
+
+<script src="pages/questionStatistical/questionStatistical.js"></script>

@@ -1,0 +1,20 @@
+.admin .search .layui-form-item {
+    display: inline-block;
+}
+
+.admin .search .layui-input-block {
+    margin-left: 85px;
+}
+
+.admin .search .time {
+    width: 300px;
+}
+
+.admin table tr td:nth-child(6) span{
+    display: block;
+    max-width: 260px;
+    margin: auto;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}

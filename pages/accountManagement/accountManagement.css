@@ -1,0 +1,31 @@
+.account form .layui-upload-drag{
+    width: 400px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.account form .layui-upload-drag i{
+    position: relative;
+    top: 40px;
+}
+
+.account form .layui-upload-drag p{
+    margin-bottom: 100px;
+    position: relative;
+    top: 50px;
+}
+
+.account form img{
+    display: block;
+    width: 100%;
+}
+
+.account form .layui-input-block {
+    margin-left: 80px;
+}
+
+.account form .button{
+    text-align:center;
+    margin: 15px 0 0 0;
+    padding-right: 10%;
+}

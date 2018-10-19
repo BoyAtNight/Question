@@ -1,0 +1,107 @@
+.create .subTitle {
+    border: 1px solid #ccc;
+    padding: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+.create .subTitle .layui-form-label {
+    width: auto;
+}
+
+.create .subTitle .layui-input-block {
+    margin-left: 90px;
+}
+
+.create .subTitle textarea {
+    resize: none;
+}
+
+.create .subTitle>button,
+.create .content>button {
+    display: none;
+}
+
+.create .content .layui-form-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    padding: 15px 15px 15px 0;
+}
+
+.create .content .layui-form-item>.layui-form-label {
+    width: 35px;
+    padding-right: 0px;
+    text-align: left;
+}
+
+.create .content .layui-form-item>div {
+    width: 85%;
+}
+
+.create .content .layui-form-item>button{
+    display: none;
+    margin: 8px 0 0 20px;
+}
+
+.create .content .layui-form-item:hover button{
+    display: block;
+}
+
+.create .content .layui-form-item .options {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.create .content .layui-form-item .options input[type='text'] {
+    width: 45%;
+    margin-right: 15px;
+}
+.create .content .layui-form-item .options input[type='text']:first-child{
+    width: calc(45% + 28px);
+}
+
+.create .content .layui-form-item .optionButton {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.create .content .layui-form-item input {
+    border-color: transparent;
+    border-style: dashed;
+}
+
+.create .content .layui-form-item input.inputBorder {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.create .content .layui-form-item input:hover,
+.create .content .layui-form-item input:focus {
+    border-color: #eee;
+}
+
+.create .content .layui-form-item .layui-form-radio {
+    display: table;
+    margin: 0 0 0 10px;
+    padding-right: 0;
+}
+
+.create .content .layui-form-item .layui-form-checkbox {
+    display: table;
+    margin-left: 12px;
+    padding-right: 0;
+}
+
+.layui-form-item .layui-form-checkbox[lay-skin=primary]{
+    margin-top: 2px;
+}
+
+.create .buttonGroup {
+    text-align: center;
+}
+
+.create .buttonGroup>button:nth-child(4) {
+    margin-left: 40px;
+}

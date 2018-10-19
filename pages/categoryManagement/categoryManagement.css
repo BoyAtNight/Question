@@ -1,0 +1,15 @@
+.category .search .layui-form-item {
+    display: inline-block;
+}
+
+.category .search .layui-input-block {
+    margin-left: 85px;
+}
+
+.category .search .time {
+    width: 300px;
+}
+
+.category .search .layui-form-item button:nth-child(2){
+    margin-right: 30px;
+}

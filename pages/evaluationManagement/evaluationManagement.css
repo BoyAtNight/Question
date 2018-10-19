@@ -1,0 +1,28 @@
+.evaluation .search .layui-form-item {
+    display: inline-block;
+}
+
+.evaluation .search .layui-input-block {
+    margin-left: 85px;
+}
+
+.evaluation .search .time {
+    width: 300px;
+}
+
+.evaluation .search .layui-form-item button:nth-child(2){
+    margin-right: 30px;
+}
+
+.layui-layer-prompt .layui-layer-content .layui-layer-input {
+    resize: none;
+}
+
+.evaluation table tr td:nth-child(3) span{
+    display: block;
+    width: 300px;
+    margin: auto;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}

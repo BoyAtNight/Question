@@ -1,0 +1,24 @@
+.template .search .layui-form-item {
+    display: inline-block;
+}
+
+.template .search .layui-input-block {
+    margin-left: 85px;
+}
+
+.template .search .time {
+    width: 300px;
+}
+
+.template .search .layui-form-item button:nth-child(2){
+    margin-right: 30px;
+}
+
+.template table tr td:nth-child(6) span{
+    display: block;
+    max-width: 260px;
+    margin: auto;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
