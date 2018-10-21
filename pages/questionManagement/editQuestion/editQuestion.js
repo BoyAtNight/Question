@@ -1,36 +1,43 @@
-layui.use(['layer', 'form'], function () {
+layui.use(['layer', 'form'], function() {
     let layer = layui.layer,
         form = layui.form,
         qId = window.sessionStorage.getItem('qId'), // 应用的问卷id
         userInfo = window.localStorage.getItem('userInfo') || window.sessionStorage.getItem('userInfo'), // 登录的用户信息
-        subjectCount = 0,   // 题目数量
-        subjectInfo = null;   // 问卷标题、类型等信息
+        subjectCount = 0, // 题目数量
+        subjectInfo = null; // 问卷标题、类型等信息
     form.render();
 
-    $(function () {
+    $(function() {
         // 菜单选中样式
-        if (userInfo == '1'/* 是否管理员 */) {
+        if (userInfo == '1' /* 是否管理员 */ ) {
             $(`a[name='./pages/templateManagement/templateManagement.html']`).parent('li').addClass('layui-this');
         } else {
             $(`a[name='./pages/questionManagement/userQuestion/userQuestion.html']`).parent('li').addClass('layui-this');
         }
+        $('#question_type_id').html(`
+            <option value="">请选择问卷类型</option>
+            <option value="0">生活类</option>
+            <option value="1">体育类</option>
+            <option value="2">美食类</option>
+        `);
+        form.render();
+        form.val('subTitle', {
+            question_title: '问卷标题',
+            question_type_id: '0',
+            status: '1',
+            question_des: '问卷描述'
+        })
     })
 
-    form.val('subTitle', {
-        question_title: '问卷标题',
-        question_type_id: '0',
-        status: '1',
-        question_des: '问卷描述'
-    })
 
     // 点击题型按钮，创建相应题目模型
-    $('.edit').on('click', '.add_Subject', function () {
+    $('.edit').on('click', '.add_Subject', function() {
         createQuestion($(this).attr('data-type'));
         $('#myContent').animate({ scrollTop: $('#content_edit').height() + 95 }, 500); // 滚动到底部
     })
 
     // 删除对应题目
-    $('#content_edit').on('click', '.del_subject', function () {
+    $('#content_edit').on('click', '.del_subject', function() {
         // data-delSubId：题型
         let delSubId = Number($(this).attr('data-delSubId'));
         let nodeList = $(this).parent().parent().find('.layui-form-item');
@@ -67,9 +74,10 @@ layui.use(['layer', 'form'], function () {
     })
 
     // 添加对应题目选项
-    $('#content_edit').on('click', '.add_option', function () {
+    $('#content_edit').on('click', '.add_option', function() {
         // data-addOpId：题型-题号-选项数量
-        let html = '', addOpId = $(this).attr('data-addOpId').split('-');
+        let html = '',
+            addOpId = $(this).attr('data-addOpId').split('-');
         // name：radio_题号_选项号   data-delOpId：当前选项号
         if (addOpId[0] == 'radio') {
             html += `<div class="options">
@@ -90,7 +98,7 @@ layui.use(['layer', 'form'], function () {
     })
 
     // 删除对应题目选项
-    $('#content_edit').on('click', '.del_option', function () {
+    $('#content_edit').on('click', '.del_option', function() {
         // data-delOpId：当前选项号
         let delOpId = Number($(this).attr('data-delOpId'));
         let addOpId = $(this).parent().parent().find('.optionButton>button').attr('data-addOpId').split('-');
@@ -109,13 +117,13 @@ layui.use(['layer', 'form'], function () {
     })
 
     // 点击生成问卷按钮，保存问卷信息
-    $('#submit_edit').click(function () {
+    $('#submit_edit').click(function() {
         console.log(12313, $('#subTitle_edit>button'), $('#content_edit>button'))
         $('#subTitle_edit>button').click();
         $('#content_edit>button').click();
     });
     // 问卷信息
-    form.on('submit(saveTitle)', function (data) {
+    form.on('submit(saveTitle)', function(data) {
         subjectInfo = {
             question_des: data.field.question_des,
             question_title: data.field.question_title,
@@ -126,7 +134,7 @@ layui.use(['layer', 'form'], function () {
         return false;
     });
     // 题目信息
-    form.on('submit(saveForm)', function (data) {
+    form.on('submit(saveForm)', function(data) {
         // data.field：当前容器的全部表单字段，名值对形式：{name: value}
         if (JSON.stringify(data.field) === '{}') {
             layer.msg('请选择题型并创建题目');
@@ -323,9 +331,9 @@ layui.use(['layer', 'form'], function () {
     }
 
     // 返回上一页
-    $('#back_edit').click(function () {
+    $('#back_edit').click(function() {
         let url = '';
-        if (userInfo == '1'/* 是否管理员 */) {
+        if (userInfo == '1' /* 是否管理员 */ ) {
             url = './pages/templateManagement/templateManagement.html';
         } else {
             url = './pages/questionManagement/userQuestion/userQuestion.html';
