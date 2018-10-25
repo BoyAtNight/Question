@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>问卷系统</title>
+    <link rel="stylesheet" href="../../asset/layui/css/layui.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        .background {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .background img {
+            display: block;
+            height: 100%;
+        }
+
+        .contents {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .layui-layout-admin .layui-header {
+            background: transparent;
+        }
+
+        .layui-header .layui-logo {
+            color: #fff;
+        }
+
+        .layui-header .layui-nav-item span {
+            position: relative;
+            top: -1px;
+        }
+
+        .contents-body {
+            height: calc(100% - 180px);
+            color: #bfbfbf;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        .contents-body p:first-child {
+            font-size: 40px;
+        }
+
+        .contents-body p:nth-child(2) {
+            font-size: 24px;
+            margin: 20px 0 50px 0;
+            ;
+        }
+
+        .contents-body a {
+            font-size: 18px;
+            width: 180px;
+            height: 54px;
+            line-height: 54px;
+            border-radius: 6px;
+        }
+
+        .contents-footer {
+            width: 100%;
+            line-height: 30px;
+            color: #fff;
+            font-size: 16px;
+            background: transparent;
+            text-align: center;
+        }
+
+        .contents-footer span {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <img src="../../asset/startPage.jpg" alt="">
+    </div>
+    <div class="contents layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">
+                <img src="../../asset/favicon.ico" class="layui-nav-img" style="border-radius: 4px;">问卷
+            </div>
+            <ul id="start_nav" class="layui-nav layui-layout-right"></ul>
+        </div>
+        <div class="contents-body">
+            <p>倾听你在乎的</p>
+            <p>免费的 [ 在线问卷生成 ] 平台</p>
+            <a href="./login.html" class="layui-btn layui-btn-normal layui-btn-lg login">免费使用</a>
+        </div>
+        <div class="contents-footer">
+            已有 <span></span> 个用户使用问卷系统
+        </div>
+    </div>
+
+    <script src="../../asset/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            let userInfo = window.localStorage.getItem('userInfo') || window.sessionStorage.getItem('userInfo'), html = '';
+            // userInfo有值表示已登录
+            if (userInfo) {
+                html = `<li class="layui-nav-item" lay-unselect>
+                            <a id="change" href="javascript:;">
+                                <img src="../../asset/favicon.ico" class="layui-nav-img">贤心
+                            </a>
+                        </li>
+                        <li class="layui-nav-item" lay-unselect><a id="logout" href="javascript:;">退出</a></li>`;
+            } else {
+                html = `<li class="layui-nav-item" lay-unselect><a href="./login.html"><i class="layui-icon layui-icon-username" style="margin-right:10px"></i>登录 <span>|</span> 注册</a></li>`;
+            }
+            $('#start_nav').html(html);
+        })
+    </script>
+</body>
+
+</html>

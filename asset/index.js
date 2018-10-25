@@ -20,7 +20,6 @@ layui.use(['element', 'layer', 'form'], function () {
                     <li class="layui-nav-item"><a href="javascript:;" name="./pages/categoryManagement/categoryManagement.html">问卷分类管理</a></li>
                     <li class="layui-nav-item"><a href="javascript:;" name="./pages/templateManagement/templateManagement.html">问卷模板管理</a></li>
                     <li class="layui-nav-item"><a href="javascript:;" name="./pages/accountManagement/accountManagement.html">账号管理</a></li>`;
-            // <li class="layui-nav-item"><a href="javascript:;" name="./pages/questionManagement/createQuestion/createQuestion.html">创建问卷</a></li>
             defaultUrl = './pages/questionManagement/adminQuestion/adminQuestion.html';
         } else { // 普通用户
             html += `<li class="layui-nav-item"><a href="javascript:;" name="./pages/questionManagement/userQuestion/userQuestion.html">问卷管理</a></li>
@@ -42,7 +41,7 @@ layui.use(['element', 'layer', 'form'], function () {
             loadNewPage(defaultUrl);
         }
     } else {
-        window.location.href = '../pages/login/login.html';
+        window.location.href = '../pages/login/startPage.html';
     }
 
     // 监听导航点击
@@ -117,7 +116,7 @@ layui.use(['element', 'layer', 'form'], function () {
     function logout() {
         window.localStorage.clear();
         window.sessionStorage.clear();
-        window.location.href = '../index.html';
+        window.location.href = '../pages/login/startPage.html';
     }
 
     // 修改密码弹框新密码校验

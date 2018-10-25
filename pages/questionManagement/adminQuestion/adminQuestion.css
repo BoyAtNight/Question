@@ -10,6 +10,11 @@
     width: 300px;
 }
 
+.admin table tr td a{
+    display: block;
+    text-align: left;
+}
+
 .admin table tr td:nth-child(6) span{
     display: block;
     max-width: 260px;

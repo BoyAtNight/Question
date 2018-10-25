@@ -29,7 +29,7 @@ layui.use(['layer', 'form', 'laypage', 'laydate'], function () {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td></td>
+                        <td><a href="pages/previewQuestion/previewQuestion.html?id=12" target="_blank">pages/previewQuestion/previewQuestion.html?id=12</a></td>
                         <td></td>
                         <td title="${''}"><span>${''}</span></td>
                         <td>
